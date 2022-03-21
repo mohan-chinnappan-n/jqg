@@ -56,8 +56,6 @@ export default class Jqg extends LightningElement {
 
         });
 
-        console.log(gTasks);
-
         Promise.all([
 
             loadScript(this, jquery360),
@@ -93,6 +91,7 @@ export default class Jqg extends LightningElement {
                 useCookie: this.useCookie,
 
                 onItemClick: function(data) {
+                    // TODO: improve this 
                     alert(JSON.stringify(data, null, 4));
                 },
                 onAddClick: function(dt, rowId) {
@@ -100,7 +99,7 @@ export default class Jqg extends LightningElement {
                 },
                 onRender: function() {
                     if (window.console && typeof console.log === "function") {
-                        console.log("chart rendered");
+                        // console.log("chart rendered");
                     }
                 }
             }); 
