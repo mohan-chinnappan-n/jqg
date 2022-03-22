@@ -84,13 +84,23 @@ tree
 
 ```
 
-- Login into your org
+- Login into your org 
+
+    - For Sandbox
 ```
 
-sfdx force:auth:web:login
+sfdx force:auth:web:login -r https://test.salesforce.com
 
 
 ```
+
+    - Production 
+```
+
+sfdx force:auth:web:login -r https://login.salesforce.com
+
+
+
 ```
 Successfully authorized mohan.chinnappan.n_os@gmail.com with org ID 00D8c000003TgUTEA0
 
