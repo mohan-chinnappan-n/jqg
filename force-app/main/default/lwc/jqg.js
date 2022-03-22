@@ -5,7 +5,6 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 import getTasks from '@salesforce/apex/Tasks.getTasks';
 import gantt from "@salesforce/resourceUrl/gantt15";
-import jquery360 from "@salesforce/resourceUrl/jquery360";
 
 
 export default class Jqg extends LightningElement {
@@ -58,24 +57,16 @@ export default class Jqg extends LightningElement {
 
         Promise.all([
 
-            loadScript(this, jquery360),
+            loadScript(this, gantt + "/js/jquery360.js"),
 
-            loadScript(
-                this,
-                gantt + "/js/jquery.fn.gantt.js"
-              ),
+            loadScript( this, gantt + "/js/jquery.fn.gantt.js"),
 
          
-            loadStyle(
-              this,
-              gantt + "/css/jqg.css"
-            )
+            loadStyle( this, gantt + "/css/jqg.css")
 
           ]).then(() => {
             // below is possible since we have lwc:dom='manual' in the markup
             const ganttClass = this.template.querySelector(".gantt");
-
-          
 
 
             $(ganttClass).gantt({
