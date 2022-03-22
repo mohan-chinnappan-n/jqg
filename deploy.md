@@ -86,7 +86,7 @@ tree
 
 - Login into your org 
 
-    - For Sandbox
+- For Sandbox org
 ```
 
 sfdx force:auth:web:login -r https://test.salesforce.com
@@ -94,7 +94,7 @@ sfdx force:auth:web:login -r https://test.salesforce.com
 
 ```
 
-    - Production 
+-  For Production org
 ```
 
 sfdx force:auth:web:login -r https://login.salesforce.com
